@@ -50,6 +50,9 @@ searchInput.oninput = function() {
     results.forEach(function(result) {
         var li = document.createElement("li");
         li.textContent = result.target;
+        li.addEventListener("click", function() {
+            on_select_callback(li);
+        });
         resultsList.appendChild(li);
     });
 

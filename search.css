@@ -15,7 +15,7 @@
 .modal-content {
     background-color: var(--modal-content-background);
     padding: 20px;
-    width: 600px;
+    width: min(92vw, 900px);
     max-height: 70%;
     overflow-y: auto;
 }
@@ -40,6 +40,14 @@
 #results li {
     padding: 5px;
     border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#results li:hover {
+    background-color: var(--result-hover-background);
 }
 
 /* Style for the selected result */
